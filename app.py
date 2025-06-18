@@ -23,6 +23,7 @@ def consulta_ca(ca_num):
         return jsonify({'erro': f'CA {ca_num} não encontrado'}), 404
 
     soup = BeautifulSoup(response.text, 'html.parser')
+    print(response.text)
     result = {}
 
     try:
